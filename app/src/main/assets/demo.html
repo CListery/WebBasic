@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>WebBridge</title>
+  </head>
+
+  <body>
+    <p>
+      <xmp id="show"></xmp>
+    </p>
+    <p>
+      <xmp id="init"></xmp>
+    </p>
+    <p>
+      <input type="text" id="text1" value="用户名(username)" />
+    </p>
+    <p>
+      <input type="text" id="text2" value="password" />
+    </p>
+    <p>
+      <input
+        type="button"
+        id="enter"
+        value="发消息给Native"
+        onclick="testClick();"
+      />
+    </p>
+    <p>
+      <input
+        type="button"
+        id="enter1"
+        value="调用Native方法"
+        onclick="testClick1();"
+      />
+    </p>
+    <p>
+      <input type="button" id="enter2" value="显示html" onclick="testDiv();" />
+    </p>
+    <p>
+      <input type="file" value="打开文件" />
+    </p>
+  </body>
+  <script>
+    function testDiv() {
+      console.log("testDiv");
+      document.getElementById("show").innerHTML =
+        document.getElementsByTagName("html")[0].innerHTML;
+    }
+
+    function testClick() {
+      console.log("testClick");
+      var str1 = document.getElementById("text1").value;
+      var str2 = document.getElementById("text2").value;
+
+      //send message to native
+      var data = {
+        id: 1,
+        content: '这是一个图片 <img src="a.png"/> test\r\nhahaha',
+      };
+      Webridge.sendToNative(data, function (responseData) {
+        document.getElementById("show").innerHTML =
+          "repsonseData from java, data = " + JSON.stringify(responseData);
+      });
+    }
+
+    function testClick1() {
+      console.log("testClick1");
+      var str1 = document.getElementById("text1").value;
+      var str2 = document.getElementById("text2").value;
+
+      //call native method
+      window.Webridge.callNative(
+        "submitFromWeb",
+        { param: "中文测试" },
+        function (responseData) {
+          document.getElementById("show").innerHTML =
+            "submitFromWeb response = " + JSON.stringify(responseData);
+        }
+      );
+    }
+
+    function connectWebBridge(callback) {
+      console.log("connectWebBridge");
+      if (window.Webridge && window.Webridge.inited) {
+        callback(Webridge);
+      } else {
+        document.addEventListener(
+          "BridgeReady",
+          function () {
+            console.log("event: BridgeReady");
+            callback(Webridge);
+          },
+          false
+        );
+      }
+    }
+
+    connectWebBridge(function (bridge) {
+      bridge.callNative(
+        "once_hello",
+        { data: "你好" },
+        function (responseData) {
+          document.getElementById("show").innerHTML =
+            "once_hello response = " + JSON.stringify(responseData);
+        }
+      );
+
+      console.log("connectWebBridge registerDefaultHandler");
+      bridge.registerDefaultReceiver(function (data, callback) {
+        console.log("[receiver] default: ", data);
+        if (callback) {
+          callback("js response hi~");
+        }
+      });
+
+      console.log("connectWebBridge registerHandler: functionInJs");
+      bridge.registerReceiver("functionInJs", function (data, callback) {
+        console.log("[receiver] functionInJs: ", data);
+        document.getElementById("show").innerHTML =
+          Date.now() + "\nreceive native data: = " + JSON.stringify(data);
+        if (callback) {
+          callback("data received!");
+        }
+      });
+    });
+  </script>
+</html>

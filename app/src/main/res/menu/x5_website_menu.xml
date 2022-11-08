@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/debugx5"
+        android:icon="@mipmap/ic_launcher"
+        android:title="debugx5" />
+
+    <item
+        android:id="@+id/debugtbs"
+        android:icon="@mipmap/ic_launcher"
+        android:title="debugtbs" />
+
+    <item
+        android:id="@+id/qrcode"
+        android:icon="@mipmap/ic_launcher"
+        android:title="扫一扫" />
+
+    <item
+        android:id="@+id/btn_vconsole"
+        android:icon="@mipmap/ic_launcher"
+        android:title="vConsole" />
+
+    <item
+        android:id="@+id/btn_eruda"
+        android:icon="@mipmap/ic_launcher"
+        android:title="eruda" />
+
+    <item
+        android:id="@+id/btn_chii"
+        android:icon="@mipmap/ic_launcher"
+        android:title="chii" />
+
+    <item
+        android:id="@+id/btn_capture"
+        android:icon="@mipmap/ic_launcher"
+        android:title="js capture" />
+
+</menu>

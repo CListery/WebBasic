@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btn_vconsole"
+        android:icon="@mipmap/ic_launcher"
+        android:title="vConsole"/>
+
+    <item
+        android:id="@+id/btn_eruda"
+        android:icon="@mipmap/ic_launcher"
+        android:title="eruda"/>
+
+    <item
+        android:id="@+id/btn_chii"
+        android:icon="@mipmap/ic_launcher"
+        android:title="chii"/>
+
+    <item
+        android:id="@+id/btn_capture"
+        android:icon="@mipmap/ic_launcher"
+        android:title="js capture"/>
+
+</menu>
