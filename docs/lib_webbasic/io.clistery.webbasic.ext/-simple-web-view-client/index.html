@@ -1,0 +1,427 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SimpleWebViewClient</title>
+<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script><script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" async="async"></script>  </head>
+  <body>
+    <div id="container">
+      <div id="leftColumn"><a href="../../../index.html">
+          <div id="logo"></div>
+        </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div id="leftToggler"><span class="icon-toggler"></span></div>
+<script type="text/javascript" src="../../../scripts/main.js"></script>        <div class="main-content" id="content" pageIds="lib_webbasic::io.clistery.webbasic.ext/SimpleWebViewClient///PointingToDeclaration//248917526">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../index.html">lib_webbasic</a>/<a href="../index.html">io.clistery.webbasic.ext</a>/<a href="index.html">SimpleWebViewClient</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>Simple</span><wbr></wbr><span>Web</span><wbr></wbr><span>View</span><wbr></wbr><span>Client</span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open class <a href="index.html">SimpleWebViewClient</a>(assetLoader: <span data-unresolved-link="androidx.webkit/WebViewAssetLoader///PointingToDeclaration/">WebViewAssetLoader</span>) : <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/index.html">X5BridgeWebViewClient</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">auto load assets sources</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+            <div class="tabs-section-body">
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="-2100013378%2FConstructors%2F248917526" anchor-label="SimpleWebViewClient" id="-2100013378%2FConstructors%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex"><a href="-simple-web-view-client.html">SimpleWebViewClient</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2100013378%2FConstructors%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">fun <a href="-simple-web-view-client.html">SimpleWebViewClient</a>(assetLoader: <span data-unresolved-link="androidx.webkit/WebViewAssetLoader///PointingToDeclaration/">WebViewAssetLoader</span> = WebViewAssetLoader.Builder()
+        .setDomain(WebBasicSettings.WebViewLoader.DOMAIN)
+        .setHttpAllowed(true)
+        // https://appassets.device/assets/xxx
+        .addPathHandler(
+            &quot;/${WebBasicSettings.WebViewLoader.WEB_ASSETS_PATH}/&quot;,
+            WebViewAssetLoader.AssetsPathHandler(AppBasicShare.context)
+        )
+        // https://appassets.device/res/xxx
+        .addPathHandler(
+            &quot;/${WebBasicSettings.WebViewLoader.WEB_RES_PATH}/&quot;,
+            WebViewAssetLoader.ResourcesPathHandler(AppBasicShare.context)
+        )
+        // https://appassets.device/internal_storage/xxx
+        .addPathHandler(
+            &quot;/${WebBasicSettings.WebViewLoader.WEB_INTERNAL_STORAGE_PATH}/&quot;,
+            WebViewAssetLoader.InternalStoragePathHandler(
+                AppBasicShare.context,
+                AppBasicShare.context.filesDir
+            )
+        )
+        .build())<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="1213146267%2FFunctions%2F248917526" anchor-label="doUpdateVisitedHistory" id="1213146267%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/do-update-visited-history.html">doUpdateVisitedHistory</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1213146267%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/do-update-visited-history.html">doUpdateVisitedHistory</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?, p2: <span data-unresolved-link="kotlin/Boolean///PointingToDeclaration/">Boolean</span>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-812980586%2FFunctions%2F248917526" anchor-label="onDetectedBlankScreen" id="-812980586%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-detected-blank-screen.html">onDetectedBlankScreen</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-812980586%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-detected-blank-screen.html">onDetectedBlankScreen</a>(p0: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?, p1: <span data-unresolved-link="kotlin/Int///PointingToDeclaration/">Int</span>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1670483847%2FFunctions%2F248917526" anchor-label="onFormResubmission" id="-1670483847%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-form-resubmission.html">onFormResubmission</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1670483847%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-form-resubmission.html">onFormResubmission</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="android.os/Message///PointingToDeclaration/">Message</span>?, p2: <span data-unresolved-link="android.os/Message///PointingToDeclaration/">Message</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="637316276%2FFunctions%2F248917526" anchor-label="onLoadResource" id="637316276%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-load-resource.html">onLoadResource</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="637316276%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-load-resource.html">onLoadResource</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1587955726%2FFunctions%2F248917526" anchor-label="onPageCommitVisible" id="1587955726%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-page-commit-visible.html">onPageCommitVisible</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1587955726%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-page-commit-visible.html">onPageCommitVisible</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1801325325%2FFunctions%2F248917526" anchor-label="onPageFinished" id="1801325325%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="on-page-finished.html">onPageFinished</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1801325325%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace"><div class="block"><div class="block">@<span data-unresolved-link="androidx.annotation/CallSuper///PointingToDeclaration/">CallSuper</span>()</div></div>open override fun <a href="on-page-finished.html">onPageFinished</a>(view: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, url: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="792076651%2FFunctions%2F248917526" anchor-label="onPageStarted" id="792076651%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-page-started.html">onPageStarted</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="792076651%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-page-started.html">onPageStarted</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?, p2: <span data-unresolved-link="android.graphics/Bitmap///PointingToDeclaration/">Bitmap</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="2127952208%2FFunctions%2F248917526" anchor-label="onReceivedClientCertRequest" id="2127952208%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-received-client-cert-request.html">onReceivedClientCertRequest</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2127952208%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-received-client-cert-request.html">onReceivedClientCertRequest</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/ClientCertRequest///PointingToDeclaration/">ClientCertRequest</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1733651034%2FFunctions%2F248917526" anchor-label="onReceivedError" id="-1733651034%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-received-error.html">onReceivedError</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1733651034%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-received-error.html">onReceivedError</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/WebResourceRequest///PointingToDeclaration/">WebResourceRequest</span>?, p2: <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/WebResourceError///PointingToDeclaration/">WebResourceError</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-received-error.html">onReceivedError</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="kotlin/Int///PointingToDeclaration/">Int</span>, p2: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?, p3: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-287414613%2FFunctions%2F248917526" anchor-label="onReceivedHttpAuthRequest" id="-287414613%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-received-http-auth-request.html">onReceivedHttpAuthRequest</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-287414613%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-received-http-auth-request.html">onReceivedHttpAuthRequest</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/HttpAuthHandler///PointingToDeclaration/">HttpAuthHandler</span>?, p2: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?, p3: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="2099954837%2FFunctions%2F248917526" anchor-label="onReceivedHttpError" id="2099954837%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-received-http-error.html">onReceivedHttpError</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2099954837%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-received-http-error.html">onReceivedHttpError</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/WebResourceRequest///PointingToDeclaration/">WebResourceRequest</span>?, p2: <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/WebResourceResponse///PointingToDeclaration/">WebResourceResponse</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1612566977%2FFunctions%2F248917526" anchor-label="onReceivedLoginRequest" id="1612566977%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-received-login-request.html">onReceivedLoginRequest</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1612566977%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-received-login-request.html">onReceivedLoginRequest</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?, p2: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?, p3: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2062112351%2FFunctions%2F248917526" anchor-label="onReceivedSslError" id="-2062112351%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="on-received-ssl-error.html">onReceivedSslError</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2062112351%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace"><div class="block"><div class="block">@<span data-unresolved-link="androidx.annotation/CallSuper///PointingToDeclaration/">CallSuper</span>()</div></div>open override fun <a href="on-received-ssl-error.html">onReceivedSslError</a>(view: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, handler: <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/SslErrorHandler///PointingToDeclaration/">SslErrorHandler</span>?, error: <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/SslError///PointingToDeclaration/">SslError</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1453236499%2FFunctions%2F248917526" anchor-label="onRenderProcessGone" id="-1453236499%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-render-process-gone.html">onRenderProcessGone</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1453236499%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-render-process-gone.html">onRenderProcessGone</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="com.tencent.smtt.sdk/WebViewClient.RenderProcessGoneDetail///PointingToDeclaration/">WebViewClient.RenderProcessGoneDetail</span>?): <span data-unresolved-link="kotlin/Boolean///PointingToDeclaration/">Boolean</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-378966752%2FFunctions%2F248917526" anchor-label="onScaleChanged" id="-378966752%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-scale-changed.html">onScaleChanged</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-378966752%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-scale-changed.html">onScaleChanged</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="kotlin/Float///PointingToDeclaration/">Float</span>, p2: <span data-unresolved-link="kotlin/Float///PointingToDeclaration/">Float</span>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1798996509%2FFunctions%2F248917526" anchor-label="onUnhandledKeyEvent" id="-1798996509%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-unhandled-key-event.html">onUnhandledKeyEvent</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1798996509%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/on-unhandled-key-event.html">onUnhandledKeyEvent</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="android.view/KeyEvent///PointingToDeclaration/">KeyEvent</span>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="299383902%2FFunctions%2F248917526" anchor-label="shouldInterceptRequest" id="299383902%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="should-intercept-request.html">shouldInterceptRequest</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="299383902%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace"><div class="block"><div class="block">@<span data-unresolved-link="androidx.annotation/CallSuper///PointingToDeclaration/">CallSuper</span>()</div></div>open override fun <a href="should-intercept-request.html">shouldInterceptRequest</a>(view: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, request: <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/WebResourceRequest///PointingToDeclaration/">WebResourceRequest</span>?): <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/WebResourceResponse///PointingToDeclaration/">WebResourceResponse</span>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><div class="block"><div class="block">@<span data-unresolved-link="androidx.annotation/CallSuper///PointingToDeclaration/">CallSuper</span>()</div></div>open override fun <a href="should-intercept-request.html">shouldInterceptRequest</a>(view: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, url: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?): <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/WebResourceResponse///PointingToDeclaration/">WebResourceResponse</span>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><div class="block"><div class="block">@<span data-unresolved-link="androidx.annotation/CallSuper///PointingToDeclaration/">CallSuper</span>()</div></div>open override fun <a href="should-intercept-request.html">shouldInterceptRequest</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/WebResourceRequest///PointingToDeclaration/">WebResourceRequest</span>?, p2: <span data-unresolved-link="android.os/Bundle///PointingToDeclaration/">Bundle</span>?): <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/WebResourceResponse///PointingToDeclaration/">WebResourceResponse</span>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2028373452%2FFunctions%2F248917526" anchor-label="shouldOverrideKeyEvent" id="-2028373452%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/should-override-key-event.html">shouldOverrideKeyEvent</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2028373452%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/should-override-key-event.html">shouldOverrideKeyEvent</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="android.view/KeyEvent///PointingToDeclaration/">KeyEvent</span>?): <span data-unresolved-link="kotlin/Boolean///PointingToDeclaration/">Boolean</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-818113754%2FFunctions%2F248917526" anchor-label="shouldOverrideUrlLoading" id="-818113754%2FFunctions%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/should-override-url-loading.html">shouldOverrideUrlLoading</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-818113754%2FFunctions%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/should-override-url-loading.html">shouldOverrideUrlLoading</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="com.tencent.smtt.export.external.interfaces/WebResourceRequest///PointingToDeclaration/">WebResourceRequest</span>?): <span data-unresolved-link="kotlin/Boolean///PointingToDeclaration/">Boolean</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="../../io.clistery.webbasic.x5/-x5-bridge-web-view-client/should-override-url-loading.html">shouldOverrideUrlLoading</a>(p0: <span data-unresolved-link="com.tencent.smtt.sdk/WebView///PointingToDeclaration/">WebView</span>?, p1: <span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span>?): <span data-unresolved-link="kotlin/Boolean///PointingToDeclaration/">Boolean</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="-939671602%2FProperties%2F248917526" anchor-label="client" id="-939671602%2FProperties%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="index.html#-939671602%2FProperties%2F248917526">client</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-939671602%2FProperties%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><a data-name="-939671602%2FProperties%2F248917526" anchor-label="client" id="-939671602%2FProperties%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a><div class="symbol monospace">var <a href="index.html#-939671602%2FProperties%2F248917526">client</a>: <span data-unresolved-link="com.tencent.smtt.sdk/WebViewClient///PointingToDeclaration/">WebViewClient</span>? = null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1583203820%2FProperties%2F248917526" anchor-label="mX5Client" id="1583203820%2FProperties%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a>
+                <div class="table-row" data-filterable-current=":lib_webbasic:dokkaDocs/release" data-filterable-set=":lib_webbasic:dokkaDocs/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="index.html#1583203820%2FProperties%2F248917526">mX5Client</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1583203820%2FProperties%2F248917526"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib_webbasic:dokkaDocs/release"><a data-name="1583203820%2FProperties%2F248917526" anchor-label="mX5Client" id="1583203820%2FProperties%2F248917526" data-filterable-set=":lib_webbasic:dokkaDocs/release"></a><div class="symbol monospace">val <a href="index.html#1583203820%2FProperties%2F248917526">mX5Client</a>: <span data-unresolved-link="com.tencent.smtt.sdk/j///PointingToDeclaration/">j</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+
