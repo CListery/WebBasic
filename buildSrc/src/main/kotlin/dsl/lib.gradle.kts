@@ -11,7 +11,7 @@ android {
         
         vectorDrawables.useSupportLibrary = true
     }
-    lintOptions {
-        isAbortOnError = false
+    lint {
+        abortOnError = false
     }
 }

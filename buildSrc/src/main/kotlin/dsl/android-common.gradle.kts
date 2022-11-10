@@ -36,21 +36,20 @@ extensions.configure(com.android.build.api.dsl.CommonExtension::class) {
             excludes += "/META-INF/README*"
             excludes += "/META-INF/NOTICE*"
             pickFirsts += "/META-INF/INDEX*"
-            pickFirsts += "/META-INF/io.netty.versions.properties"
         }
     }
-    lintOptions {
+    lint {
         disable += "ParcelCreator"
         disable += "GoogleAppIndexingWarning"
-        isQuiet = false
-        isAbortOnError = false
-        isIgnoreWarnings = true
+        quiet = false
+        abortOnError = false
+        ignoreWarnings = true
         xmlReport = false
         htmlReport = true
         htmlOutput = project.file("${project.buildDir}/reports/lint/lint-reports.html")
         xmlOutput = project.file("${project.buildDir}/reports/lint/lint-reports.xml")
-        isCheckDependencies = true
-        isIgnoreTestSources = true
+        checkDependencies = true
+        ignoreTestSources = true
     }
     sourceSets.named("main") {
         java.srcDirs("src/main/java", "src/main/kotlin")
