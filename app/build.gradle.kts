@@ -37,7 +37,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     
 //    implementation(project(":lib_webbasic"))
-    implementation("io.github.clistery:webbasic:1.0.0")
+    implementation("io.github.clistery:webbasic:1.1.0")
     
     implementation("com.google.zxing:core:3.3.3")
     implementation("com.journeyapps:zxing-android-embedded:3.6.0") {

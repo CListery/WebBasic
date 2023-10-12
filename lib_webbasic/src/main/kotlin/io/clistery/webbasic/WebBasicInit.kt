@@ -141,23 +141,23 @@ internal class WebBasicInit : AppBasicInitializer() {
         QbSdk.setDownloadWithoutWifi(true)
         QbSdk.setCoreMinVersion(QbSdk.CORE_VER_ENABLE_202112)
         
-        // TBS dex2oat优化
+        // TBS dex2oat optimization
         val map = HashMap<String, Any>()
         map[TbsCoreSettings.TBS_SETTINGS_USE_SPEEDY_CLASSLOADER] = true
         map[TbsCoreSettings.TBS_SETTINGS_USE_DEXLOADER_SERVICE] = true
         QbSdk.initTbsSettings(map)
         
-        /* SDK内核初始化周期回调，包括 下载、安装、加载 */
+        /* TBS SDK initialization callback, including download, installation, and loading */
         QbSdk.setTbsListener(object : TbsListener {
             /**
-             * @param stateCode 用户可处理错误码请参考[com.tencent.smtt.sdk.TbsCommonCode]
+             * @param stateCode see[com.tencent.smtt.sdk.TbsCommonCode]
              */
             override fun onDownloadFinish(stateCode: Int) {
                 logD("onDownloadFinished: $stateCode", loggable = WebBasicSettings.WebLogger)
             }
             
             /**
-             * @param stateCode 用户可处理错误码请参考[com.tencent.smtt.sdk.TbsCommonCode]
+             * @param stateCode see[com.tencent.smtt.sdk.TbsCommonCode]
              */
             override fun onInstallFinish(stateCode: Int) {
                 logD("onInstallFinished: $stateCode", loggable = WebBasicSettings.WebLogger)
@@ -167,7 +167,8 @@ internal class WebBasicInit : AppBasicInitializer() {
             }
             
             /**
-             * 首次安装应用，会触发内核下载，此时会有内核下载的进度回调。
+             * When the application is installed for the first time, the kernel download is triggered,
+             * and the progress of the kernel download is received.
              * @param progress 0 - 100
              */
             override fun onDownloadProgress(progress: Int) {

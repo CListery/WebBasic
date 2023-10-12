@@ -1,5 +1,6 @@
 package io.clistery.webbasic.demo
 
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -9,7 +10,9 @@ import com.tencent.smtt.sdk.QbSdk
 import com.tencent.smtt.sdk.WebView
 import com.tencent.smtt.sdk.WebViewClient
 import com.yh.appbasic.logger.logD
+import com.yh.appbasic.share.AppBasicShare
 import com.yh.appbasic.ui.ViewBindingActivity
+import io.clistery.webbasic.WebBasicSettings
 import io.clistery.webbasic.bridge.BridgeJSCallbackWithOutResp
 import io.clistery.webbasic.bridge.IBridgeJSCallback
 import io.clistery.webbasic.demo.databinding.ActMainBinding
@@ -20,7 +23,7 @@ class MainAct : ViewBindingActivity<ActMainBinding>() {
     override fun binderCreator(savedInstanceState: Bundle?) = ActMainBinding.inflate(layoutInflater)
     
     override fun ActMainBinding.onInit(savedInstanceState: Bundle?) {
-
+        WebBasicSettings.DEBUG = true
 
 //        web.loadUrl("http://soft.imtt.qq.com/browser/tes/feedback.html")
 //        web.loadUrl("https://debugtbs.qq.com")

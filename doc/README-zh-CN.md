@@ -11,7 +11,7 @@
 ### Gradle
 
 ```kts
-implementation("io.github.clistery:webbasic:1.0.0")
+implementation("io.github.clistery:webbasic:1.1.0")
 ```
 
 ## 使用

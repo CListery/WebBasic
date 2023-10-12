@@ -118,6 +118,9 @@ open class SimpleWebViewClient(
     }
 }
 
+/**
+ * simple [WebChromeClient]
+ */
 open class SimpleWebChromeClient : WebChromeClient() {
     override fun onConsoleMessage(consoleMessage: ConsoleMessage?): Boolean {
         consoleMessage.log()
@@ -139,6 +142,10 @@ open class SimpleWebChromeClient : WebChromeClient() {
 
 /**
  * auto setup WebView
+ *
+ * @param ua user agent
+ * @param wcc [WebChromeClient]
+ * @param wvc [WebViewClient]
  */
 @JvmOverloads
 fun WebView.basicSettings(
@@ -173,8 +180,8 @@ fun WebView.disableContextMenu() {
 }
 
 /**
- * https://github.com/liriliri/eruda
- * https://cdn.jsdelivr.net/npm/eruda@2/eruda.min.js
+ * [eruda](https://github.com/liriliri/eruda)
+ * - [v2.5.0](https://cdn.jsdelivr.net/npm/eruda@2/eruda.min.js)
  */
 fun WebView.eruda() = loadAssetsJS(
     jsFileName = "eruda.js",
@@ -183,8 +190,8 @@ fun WebView.eruda() = loadAssetsJS(
 )
 
 /**
- * https://github.com/Tencent/vConsole
- * https://cdn.jsdelivr.net/npm/vconsole@3/dist/vconsole.min.js
+ * [vConsole](https://github.com/Tencent/vConsole)
+ * - [v3.14.7](https://cdn.jsdelivr.net/npm/vconsole@3/dist/vconsole.min.js)
  */
 fun WebView.vConsole() = loadAssetsJS(
     jsFileName = "vconsole.js",
@@ -193,8 +200,34 @@ fun WebView.vConsole() = loadAssetsJS(
 )
 
 /**
- * https://github.com/liriliri/chii
- * https://cdn.jsdelivr.net/npm/chii@1.6.2/server/index.min.js
+ * [chii](https://github.com/liriliri/chii)
+ * - [v1.6.2](https://cdn.jsdelivr.net/npm/chii@1.6.2/server/index.min.js)
+ *
+ * Debugging tool, you can debug the Phone web-page on PC.
+ *
+ * ## local
+ *
+ * 1. server on PC
+ *    ```shell
+ *    npm install -g chii
+ *    chii -p 9099
+ *    ```
+ * 2. Phone web-page connect PC server
+ *    ```kotlin
+ *    web.chii("http://${server}:9099")
+ *    ```
+ * 3. browser open [http://${server}:9099](http://<server>:9099)
+ *
+ * ## remote
+ *
+ * ### *PRIVACY WARNING*
+ * > DO NOT USE A PUBLIC SERVER IN A PRODUCTION ENVIRONMENT BECAUSE PRIVATE INFORMATION MAY BE DISCLOSED.
+ *
+ * - Phone web-page connect Remote public server
+ *    ```kotlin
+ *    web.chii()
+ *    ```
+ * - browser open [https://chii.liriliri.io/](https://chii.liriliri.io/)
  *
  * @param chiiServerUrl default: https://chii.liriliri.io/
  */
@@ -203,20 +236,24 @@ fun WebView.chii(chiiServerUrl: String = "https://chii.liriliri.io") {
     eval("window.ChiiServerUrl='$chiiServerUrl'")
     loadAssetsJS(
         jsFileName = "chii.js",
-        groupVarName = "chii",
+        groupVarName = null,
     )
 //    eval("javascript:(function () { var script = document.createElement('script'); script.src=\"//192.168.3.223:9099/target.js\"; document.body.appendChild(script); })();")
 }
 
 /**
- * https://github.com/niklasvh/html2canvas
- * https://cdn.jsdelivr.net/npm/html2canvas@1/dist/html2canvas.min.js
+ * [html2canvas](https://github.com/niklasvh/html2canvas)
+ * - [v1.4.1](https://cdn.jsdelivr.net/npm/html2canvas@1/dist/html2canvas.min.js)
  *
- * @param option
- *          {
- *          allowTaint: true, // 允许跨域图片
- *          useCORS: true, // 是否尝试使用CORS从服务器加载图像
- *          }
+ * Generate screenshots by specifying [elementQuery]
+ *
+ * @param elementQuery - default: "body". see also [document.querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+ *      - support: "#id", ".class", "tag"... etc.
+ * @param option - default: "{}". see also [html2canvas](https://html2canvas.hertzen.com/configuration)
+ *      - allowTaint: default false
+ *          - Whether to allow cross-origin images to taint the canvas
+ *      - useCORS: default false
+ *          - Whether to attempt to load images from a server using CORS
  */
 @JvmOverloads
 fun X5BridgeWebView.capture(
@@ -245,31 +282,44 @@ fun X5BridgeWebView.capture(
 
 /**
  * load javascript file from assets
+ *
+ * @param jsFileName - full name of javascript file in assets
+ * @param groupVarName - if not null, will be assigned to window[groupVarName]
+ * @param initInvoke - invoke after load js file
+ * @param execInvoke - invoke after initInvoke
  */
 @JvmOverloads
 fun WebView.loadAssetsJS(
     jsFileName: String,
-    groupVarName: String,
+    groupVarName: String?,
     initInvoke: String = "console.log('init...');",
     execInvoke: String = "console.log('exec...');",
 ) {
     fun convFunction(code: String) = if (code.isEmpty()) "" else "{ $code }"
     
     val onload = """
-        function () {
-          if ("function" === typeof define && define.amd) {
-            require(["$groupVarName"], function ($groupVarName) {
-              window["$groupVarName"] = $groupVarName;
-              ${convFunction(initInvoke)}
-              ${convFunction(execInvoke)}
-            });
-          } else {
-            window["$groupVarName"] = $groupVarName;
-            ${convFunction(initInvoke)}
-            ${convFunction(execInvoke)}
-          }
-        };
-        """
+        function () {${
+        if (groupVarName.isNullOrEmpty()) {
+            """
+                ${convFunction(initInvoke)}
+                ${convFunction(execInvoke)}
+            """
+        } else {
+            """
+              if ("function" === typeof define && define.amd) {
+                require(["$groupVarName"], function ($groupVarName) {
+                  window["$groupVarName"] = $groupVarName;
+                  ${convFunction(initInvoke)}
+                  ${convFunction(execInvoke)}
+                });
+              } else {
+                window["$groupVarName"] = $groupVarName;
+                ${convFunction(initInvoke)}
+                ${convFunction(execInvoke)}
+              }
+            """
+        }
+    }};""".trimIndent()
     eval("""
         if ("undefined" !== typeof window["$groupVarName"]) {
           ${convFunction(execInvoke)}
@@ -284,6 +334,8 @@ fun WebView.loadAssetsJS(
 
 /**
  * safe exec js command
+ *
+ * @param jsCommand - js command
  */
 fun WebView.eval(jsCommand: String) {
     var completeCommand = jsCommand.lines()
